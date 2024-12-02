@@ -1,5 +1,6 @@
 <?php
 
+/*
 $song = "There was an old lady who swallowed a fly.\n" .
     "I don't know why she swallowed a fly - perhaps she'll die!\n" .
     "\n" .
@@ -40,5 +41,12 @@ $song = "There was an old lady who swallowed a fly.\n" .
     "\n" .
     "There was an old lady who swallowed a horse...\n" .
     "...She's dead, of course!";
+*/
 
-echo $song;
+use App\Song;
+
+require_once 'vendor/autoload.php';
+
+$song = new Song();
+
+echo $song->sing();
