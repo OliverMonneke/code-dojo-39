@@ -43,10 +43,24 @@ $song = "There was an old lady who swallowed a fly.\n" .
     "...She's dead, of course!";
 */
 
+use App\animals\Bird;
+use App\animals\Cat;
+use App\animals\Cow;
+use App\animals\Dog;
+use App\animals\Fly;
+use App\animals\Horse;
+use App\animals\Spider;
 use App\Song;
 
 require_once 'vendor/autoload.php';
 
 $song = new Song();
+$song->addAnimal(new Fly());
+$song->addAnimal(new Spider());
+$song->addAnimal(new Bird());
+$song->addAnimal(new Cat());
+$song->addAnimal(new Dog());
+$song->addAnimal(new Cow());
+$song->addAnimal(new Horse());
 
 echo $song->sing();
